@@ -64,7 +64,7 @@
      <Compile Include="Assets\enemy_manager.cs" />
      <Compile Include="Assets\enemy_ship.cs" />
      <Compile Include="Assets\game_manager.cs" />
-     <Compile Include="Assets\game_manager2.cs" />
+     <Compile Include="Assets\garbageCollector.cs" />
      <Compile Include="Assets\player_controller.cs" />
      <Compile Include="Assets\projectile_controller.cs" />
      <None Include="Assets\Shaders\BackgroundAndCharacters\ReflectiveBackgroundSelfIllumination.shader" />
