@@ -4,34 +4,39 @@ using System.Collections;
 public class player_controller : MonoBehaviour {
 
 	public float speed = 10.0f;
-	private Rigidbody rb;
 	public GameObject projectilePrefab;
+    public Rigidbody rb;
 	public AudioClip weapon1;
 	public AudioClip bum;
 
-	// Use this for initialization
-	void Start () {
-		rb = GetComponent<Rigidbody> ();	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+#if UNITY_ANDROID
+    void Start()
+    {
+        rb = this.GetComponent<Rigidbody>();
+    }
+
+#endif
+
+    // Update is called once per frame
+    void Update () {
 
 #if UNITY_EDITOR || UNITY_STANDALONE
 
-        if (Input.GetKey (KeyCode.LeftArrow)) 
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) 
 		{
-			rb.AddForce(-transform.right*speed);
+            if (this.transform.position.x != -2)
+            {
+                this.transform.position = new Vector3(this.transform.position.x - 2, this.transform.position.y, this.transform.position.z);
+            }
 		}
-	else if (Input.GetKey (KeyCode.RightArrow)) 
+	else if (Input.GetKeyDown(KeyCode.RightArrow)) 
 		{
-			rb.AddForce(transform.right*speed);
-		}
-	 if (Input.GetKeyUp (KeyCode.LeftArrow) || Input.GetKeyUp (KeyCode.RightArrow)) 
-		{
-			rb.velocity = new Vector3 (0,0,0);
+            if (this.transform.position.x != 2)
+            {
+                this.transform.position = new Vector3(this.transform.position.x + 2, this.transform.position.y, this.transform.position.z);
+            }
+        }
 
-		}
 	if (Input.GetKeyDown(KeyCode.Space))
 		{
 
