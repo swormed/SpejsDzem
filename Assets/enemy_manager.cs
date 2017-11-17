@@ -28,7 +28,15 @@ public class enemy_manager : MonoBehaviour {
 
 	void SpawnNewEnemy ()
 	{
-		Vector3 pos = new Vector3(Random.Range(-4,4),15,0);
+		int los = Random.Range (0, 3);
+		Vector3 pos = new Vector3 (0, 0, 0);
+		if (los == 0) {
+			pos = new Vector3(-2, 15, 0);
+		} else if (los == 1) {
+			pos = new Vector3 (0, 15, 0);
+		} else if (los == 2) {
+			pos = new Vector3 (2, 15, 0);
+		}
 		pos += new Vector3 (0, 8, 0);
 		lastSpawnTime = Time.time;
 		spawnTime = Random.Range (minSpawnTime, maxSpawnTime);
