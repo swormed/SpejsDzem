@@ -15,6 +15,20 @@ public class player_controller : MonoBehaviour {
         rb = this.GetComponent<Rigidbody>();
     }
 
+    public void MoveLeft()
+    {
+        if (this.transform.position.x != -2)
+        {
+            this.transform.position = new Vector3(this.transform.position.x - 2, this.transform.position.y, this.transform.position.z);
+        }
+    }
+    public void MoveRight()
+    {
+        if (this.transform.position.x != 2)
+        {
+            this.transform.position = new Vector3(this.transform.position.x + 2, this.transform.position.y, this.transform.position.z);
+        }
+    }
 #endif
 
     // Update is called once per frame
@@ -24,17 +38,12 @@ public class player_controller : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.LeftArrow)) 
 		{
-            if (this.transform.position.x != -2)
-            {
-                this.transform.position = new Vector3(this.transform.position.x - 2, this.transform.position.y, this.transform.position.z);
-            }
-		}
+            MoveLeft();
+
+        }
 	else if (Input.GetKeyDown(KeyCode.RightArrow)) 
 		{
-            if (this.transform.position.x != 2)
-            {
-                this.transform.position = new Vector3(this.transform.position.x + 2, this.transform.position.y, this.transform.position.z);
-            }
+            MoveRight();
         }
 
 	if (Input.GetKeyDown(KeyCode.Space))
@@ -47,8 +56,6 @@ public class player_controller : MonoBehaviour {
 			newProjectile = Instantiate(projectilePrefab, pos, Quaternion.identity) as GameObject;
 			newProjectile.transform.Rotate(new Vector3 (-90, 0, 0));
 			
-			
-
 
 			GetComponent<AudioSource>().clip = weapon1; //dla kilku broni
 			GetComponent<AudioSource>().Play();
@@ -86,10 +93,6 @@ public class player_controller : MonoBehaviour {
         }
 
 #endif
-
-
-
-
 
     }
 

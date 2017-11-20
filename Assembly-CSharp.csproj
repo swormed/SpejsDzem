@@ -67,6 +67,7 @@
      <Compile Include="Assets\garbageCollector.cs" />
      <Compile Include="Assets\player_controller.cs" />
      <Compile Include="Assets\projectile_controller.cs" />
+     <Compile Include="Assets\VoiceRecognition.cs" />
      <None Include="Assets\Shaders\BackgroundAndCharacters\ReflectiveBackgroundSelfIllumination.shader" />
      <None Include="Assets\Shaders\BackgroundAndCharacters\Fallback.shader" />
  <Reference Include="UnityEngine.UI">
