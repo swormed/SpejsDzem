@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{C5F8D323-CCDF-BBAA-F9C6-130053D4E495}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -51,58 +52,58 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Done\Done_Scripts\Done_BGScroller.cs" />
-     <Compile Include="Assets\Done\Done_Scripts\Done_DestroyByBoundary.cs" />
-     <Compile Include="Assets\Done\Done_Scripts\Done_DestroyByContact.cs" />
-     <Compile Include="Assets\Done\Done_Scripts\Done_DestroyByTime.cs" />
-     <Compile Include="Assets\Done\Done_Scripts\Done_EvasiveManeuver.cs" />
-     <Compile Include="Assets\Done\Done_Scripts\Done_GameController.cs" />
-     <Compile Include="Assets\Done\Done_Scripts\Done_Mover.cs" />
-     <Compile Include="Assets\Done\Done_Scripts\Done_PlayerController.cs" />
-     <Compile Include="Assets\Done\Done_Scripts\Done_RandomRotator.cs" />
-     <Compile Include="Assets\Done\Done_Scripts\Done_WeaponController.cs" />
-     <Compile Include="Assets\enemy_manager.cs" />
-     <Compile Include="Assets\enemy_ship.cs" />
-     <Compile Include="Assets\game_manager.cs" />
-     <Compile Include="Assets\garbageCollector.cs" />
-     <Compile Include="Assets\player_controller.cs" />
-     <Compile Include="Assets\projectile_controller.cs" />
-     <Compile Include="Assets\VoiceRecognition.cs" />
-     <None Include="Assets\Shaders\BackgroundAndCharacters\ReflectiveBackgroundSelfIllumination.shader" />
-     <None Include="Assets\Shaders\BackgroundAndCharacters\Fallback.shader" />
- <Reference Include="UnityEngine.UI">
- <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.TestRunner">
- <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
- </Reference>
- <Reference Include="nunit.framework">
- <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Timeline">
- <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.UIAutomation">
- <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.GoogleAudioSpatializer">
- <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.HoloLens">
- <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.SpatialTracking">
- <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Users/maja1/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Users/maja1/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\Done\Done_Scripts\Done_BGScroller.cs" />
+    <Compile Include="Assets\Done\Done_Scripts\Done_DestroyByBoundary.cs" />
+    <Compile Include="Assets\Done\Done_Scripts\Done_DestroyByContact.cs" />
+    <Compile Include="Assets\Done\Done_Scripts\Done_DestroyByTime.cs" />
+    <Compile Include="Assets\Done\Done_Scripts\Done_EvasiveManeuver.cs" />
+    <Compile Include="Assets\Done\Done_Scripts\Done_GameController.cs" />
+    <Compile Include="Assets\Done\Done_Scripts\Done_Mover.cs" />
+    <Compile Include="Assets\Done\Done_Scripts\Done_PlayerController.cs" />
+    <Compile Include="Assets\Done\Done_Scripts\Done_RandomRotator.cs" />
+    <Compile Include="Assets\Done\Done_Scripts\Done_WeaponController.cs" />
+    <Compile Include="Assets\enemy_manager.cs" />
+    <Compile Include="Assets\enemy_ship.cs" />
+    <Compile Include="Assets\game_manager.cs" />
+    <Compile Include="Assets\garbageCollector.cs" />
+    <Compile Include="Assets\player_controller.cs" />
+    <Compile Include="Assets\projectile_controller.cs" />
+    <Compile Include="Assets\VoiceRecognition.cs" />
+    <None Include="Assets\Shaders\BackgroundAndCharacters\ReflectiveBackgroundSelfIllumination.shader" />
+    <None Include="Assets\Shaders\BackgroundAndCharacters\Fallback.shader" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:/Users/maja1/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>C:/Users/maja1/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -112,5 +113,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>

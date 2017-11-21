@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Windows.Speech;
 
@@ -10,10 +12,27 @@ public class VoiceRecognition : MonoBehaviour {
     [SerializeField]
     private Text m_Recognitions;
 
+    public List<string> leftWords;
+    public List<Sprite> leftSprites;
+    public List<string> rightWords;
+    public List<Sprite> rightSprites;
+    public Image leftImage;
+    public Image rightImage;
+    public Text leftText;
+    public Text rigthText;
+
+    private System.Random rand;
     private DictationRecognizer m_DictationRecognizer;
+    private int next = 0;
 
     void Start()
     {
+        //inicjalizacja pierwszych słów
+        rand = new System.Random();
+        ChooseNewLeftWord();
+        ChooseNewRightWord();
+
+
         m_DictationRecognizer = new DictationRecognizer();
 
         m_DictationRecognizer.DictationResult += (text, confidence) =>
@@ -45,13 +64,30 @@ public class VoiceRecognition : MonoBehaviour {
 
     void MoveByHypotheses(string text)
     {
-        if (text.ToLower() == "right")
+        if (rightWords.Contains(text.ToLower()))
         {
             this.GetComponent<player_controller>().MoveRight();
+            ChooseNewRightWord();
         }
-        else if (text.ToLower() == "left")
+        else if (leftWords.Contains(text.ToLower()))
         {
-            this.GetComponent<player_controller>().MoveRight();
+            this.GetComponent<player_controller>().MoveLeft();
+            ChooseNewLeftWord();
         }
+    }
+
+    public void ChooseNewRightWord()
+    {
+        next = rand.Next(0, rightWords.Count);
+        rigthText.text = rightWords[next].ToString();
+        rightImage.sprite = rightSprites[next];
+    }
+
+    public void ChooseNewLeftWord()
+    {
+        next = rand.Next(0, leftWords.Count);
+        leftText.text = leftWords[next].ToString();
+        leftImage.sprite = leftSprites[next];
+
     }
 }
