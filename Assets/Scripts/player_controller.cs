@@ -36,12 +36,12 @@ public class player_controller : MonoBehaviour {
 
 #if UNITY_EDITOR || UNITY_STANDALONE
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow)) 
+        if (Input.GetKeyDown(KeyCode.UpArrow)) 
 		{
             MoveLeft();
 
         }
-	else if (Input.GetKeyDown(KeyCode.RightArrow)) 
+	else if (Input.GetKeyDown(KeyCode.DownArrow)) 
 		{
             MoveRight();
         }
