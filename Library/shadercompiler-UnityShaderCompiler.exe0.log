@@ -1,8 +1,2 @@
-Base path: C:/Program Files/Unity/Editor/Data
+Base path: E:/Unity2017/Editor/Data
 Cmd: initializeCompiler
-Cmd: preprocess
-  error: 2 plat 20 at (25): Can't find include file AngryInclude.cginc
-  insize=1476 outsize=569 ok=0
-Cmd: preprocess
-  error: 2 plat 20 at (50): Can't find include file AngryInclude.cginc
-  insize=4168 outsize=1373 ok=0

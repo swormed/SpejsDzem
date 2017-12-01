@@ -9,8 +9,8 @@ public class enemy_manager : MonoBehaviour {
     public Transform player;
 
 	private float spawnTime;
-	public float minSpawnTime = 1.0f;
-	public float maxSpawnTime = 3.0f;
+	public float minSpawnTime = 3.0f;
+	public float maxSpawnTime = 10.0f;
 	private float lastSpawnTime;
 
 	// Use this for initialization
@@ -24,7 +24,8 @@ public class enemy_manager : MonoBehaviour {
 		{
 			SpawnNewEnemy();
 		}
-	}
+
+    }
 
 	void SpawnNewEnemy ()
 	{
@@ -41,17 +42,26 @@ public class enemy_manager : MonoBehaviour {
 		lastSpawnTime = Time.time;
 		spawnTime = Random.Range (minSpawnTime, maxSpawnTime);
 
-		GameObject newEnemy;
-		GameObject newEnemy2;
-        GameObject newEnemy3;
+        los = Random.Range(0, 3);
+        GameObject newEnemy;
 
-        newEnemy = Instantiate (enemyPrefab, pos, Quaternion.identity) as GameObject; 
-		newEnemy.transform.Rotate(new Vector3 (0, 0, 0));
-		
-		newEnemy2 = Instantiate (enemyPrefab2, pos, Quaternion.identity) as GameObject; 
-		newEnemy2.transform.Rotate(new Vector3 (0, 0, 0));
+        if (los == 0)
+        {
+            newEnemy = Instantiate (enemyPrefab, pos, Quaternion.identity) as GameObject; 
+		    newEnemy.transform.Rotate(new Vector3 (0, 0, 0));
+        }
+        else if (los == 1)
+        {
+            newEnemy = Instantiate (enemyPrefab2, pos, Quaternion.identity) as GameObject;
+            newEnemy.transform.Rotate(new Vector3 (0, 0, 0));
+        }
+        else if (los == 2)
+        {
+            newEnemy = Instantiate(enemyPrefab3, pos, Quaternion.identity) as GameObject;
+            newEnemy.transform.Rotate(new Vector3(0, 0, 90));
+        }
 
-        newEnemy3 = Instantiate(enemyPrefab3, pos, Quaternion.identity) as GameObject;
-        newEnemy3.transform.Rotate(new Vector3(0, 0, 0));
+
+
     }
 }
