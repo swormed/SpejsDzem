@@ -34,10 +34,10 @@ public class game_manager : MonoBehaviour {
 		zycia--;
 		lifes.text = zycia.ToString ();
 		//actualShips--;
-		if (actualShips == 0) 
+		if (zycia == 0) 
 		{
-		//koniec gry
-		}
+            Application.LoadLevel("smierc");
+        }
 		//lifes.text = actualShips.ToString ();
 	}
     public void PlusPlus()

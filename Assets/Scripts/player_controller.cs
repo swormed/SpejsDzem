@@ -9,7 +9,7 @@ public class player_controller : MonoBehaviour {
 	public AudioClip weapon1;
 	public AudioClip bum;
 
-#if UNITY_ANDROID
+
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
@@ -29,12 +29,11 @@ public class player_controller : MonoBehaviour {
             this.transform.position = new Vector3(this.transform.position.x + 2, this.transform.position.y, this.transform.position.z);
         }
     }
-#endif
+
 
     // Update is called once per frame
     void Update () {
 
-#if UNITY_EDITOR || UNITY_STANDALONE
 
         if (Input.GetKeyDown(KeyCode.UpArrow)) 
 		{
@@ -62,8 +61,6 @@ public class player_controller : MonoBehaviour {
 
 
 		}
-
-#endif
 
 #if UNITY_ANDROID
 

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scena1.unity
+- path: Assets/scenes/menuglowne.unity
   isLoaded: 1
   isActive: 1
