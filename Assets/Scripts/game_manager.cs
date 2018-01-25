@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class game_manager : MonoBehaviour {
 
@@ -16,6 +17,8 @@ public class game_manager : MonoBehaviour {
 
 	void Start()
 	{
+        SharedObject.goodWords = new List<string>();
+        SharedObject.badWords = new List<string>();
         //actualShips = zycia;
         lifes.text = zycia.ToString();
 	}

@@ -51,6 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\addBadWords.cs" />
+     <Compile Include="Assets\addGoodWords.cs" />
      <Compile Include="Assets\newgame.cs" />
      <Compile Include="Assets\Scripts\enemy_manager.cs" />
      <Compile Include="Assets\Scripts\enemy_ship.cs" />
@@ -63,6 +65,7 @@
      <Compile Include="Assets\Scripts\loadLevel1.cs" />
      <Compile Include="Assets\Scripts\player_controller.cs" />
      <Compile Include="Assets\Scripts\projectile_controller.cs" />
+     <Compile Include="Assets\Scripts\SharedObject.cs" />
      <Compile Include="Assets\Scripts\VoiceRecognition.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Unity2017/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

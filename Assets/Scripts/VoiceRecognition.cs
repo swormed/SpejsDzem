@@ -20,10 +20,7 @@ public class VoiceRecognition : MonoBehaviour {
     public Image rightImage;
     public Text leftText;
     public Text rigthText;
-
-
-    public List<string> goodWords = new List<string>();
-    public List<string> badWords = new List<string>();
+    
 
     private System.Random rand;
     private DictationRecognizer m_DictationRecognizer;
@@ -71,13 +68,13 @@ public class VoiceRecognition : MonoBehaviour {
         if (rightWords.Contains(text.ToLower()))
         {
             this.GetComponent<player_controller>().MoveRight();
-            goodWords.Add(text);
+            SharedObject.goodWords.Add(text);
             ChooseNewRightWord(false);
         }
         else if (leftWords.Contains(text.ToLower()))
         {
             this.GetComponent<player_controller>().MoveLeft();
-            goodWords.Add(text);
+            SharedObject.goodWords.Add(text);
             ChooseNewLeftWord(false);
         }
     }
@@ -86,7 +83,7 @@ public class VoiceRecognition : MonoBehaviour {
     {
         if (addToBad == true)
         {
-            badWords.Add(rigthText.text);
+            SharedObject.badWords.Add(rigthText.text);
         }
         next = rand.Next(0, rightWords.Count);
         rigthText.text = rightWords[next].ToString();
@@ -97,7 +94,7 @@ public class VoiceRecognition : MonoBehaviour {
     {
         if (addToBad == true)
         {
-            badWords.Add(leftText.text);
+            SharedObject.badWords.Add(leftText.text);
         }
         next = rand.Next(0, leftWords.Count);
         leftText.text = leftWords[next].ToString();
