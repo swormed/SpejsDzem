@@ -62,35 +62,6 @@ public class player_controller : MonoBehaviour {
 
 		}
 
-#if UNITY_ANDROID
-
-    if (Input.acceleration.x > 0)
-        {
-            rb.AddForce(transform.right * speed);
-        }
-
-    else if (Input.acceleration.x < 0)
-        {
-            rb.AddForce(-transform.right * speed);
-        }
-    if (Input.touchCount > 0)
-        {
-            Vector3 pos = transform.position;
-            pos += new Vector3(0, 1.5f, 0);
-
-            GameObject newProjectile;
-            newProjectile = Instantiate(projectilePrefab, pos, Quaternion.identity) as GameObject;
-            newProjectile.transform.Rotate(new Vector3(-90, 0, 0));
-
-
-
-
-            GetComponent<AudioSource>().clip = weapon1; //dla kilku broni
-            GetComponent<AudioSource>().Play();
-        }
-
-#endif
-
     }
 
     void OnTriggerEnter(Collider col)
@@ -100,7 +71,9 @@ public class player_controller : MonoBehaviour {
 			Destroy (col.gameObject);
 			GetComponent<AudioSource>().clip = bum;
 			GetComponent<AudioSource>().Play();
-		}
+            GetComponent<VoiceRecognition>().ChooseNewLeftWord(true);
+            GetComponent<VoiceRecognition>().ChooseNewRightWord(true);
+        }
         if (col.tag == "ball")
         {
             GameObject.FindObjectOfType<game_manager>().PlusPlus();

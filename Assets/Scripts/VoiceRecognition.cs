@@ -21,17 +21,20 @@ public class VoiceRecognition : MonoBehaviour {
     public Text leftText;
     public Text rigthText;
 
+
+    public List<string> goodWords = new List<string>();
+    public List<string> badWords = new List<string>();
+
     private System.Random rand;
     private DictationRecognizer m_DictationRecognizer;
     private int next = 0;
-
+    
     void Start()
     {
         //inicjalizacja pierwszych słów
         rand = new System.Random();
-        ChooseNewLeftWord();
-        ChooseNewRightWord();
-
+        ChooseNewLeftWord(false);
+        ChooseNewRightWord(false);
 
         m_DictationRecognizer = new DictationRecognizer();
 
@@ -68,24 +71,34 @@ public class VoiceRecognition : MonoBehaviour {
         if (rightWords.Contains(text.ToLower()))
         {
             this.GetComponent<player_controller>().MoveRight();
-            ChooseNewRightWord();
+            goodWords.Add(text);
+            ChooseNewRightWord(false);
         }
         else if (leftWords.Contains(text.ToLower()))
         {
             this.GetComponent<player_controller>().MoveLeft();
-            ChooseNewLeftWord();
+            goodWords.Add(text);
+            ChooseNewLeftWord(false);
         }
     }
 
-    public void ChooseNewRightWord()
+    public void ChooseNewRightWord(bool addToBad)
     {
+        if (addToBad == true)
+        {
+            badWords.Add(rigthText.text);
+        }
         next = rand.Next(0, rightWords.Count);
         rigthText.text = rightWords[next].ToString();
         rightImage.sprite = rightSprites[next];
     }
 
-    public void ChooseNewLeftWord()
+    public void ChooseNewLeftWord(bool addToBad)
     {
+        if (addToBad == true)
+        {
+            badWords.Add(leftText.text);
+        }
         next = rand.Next(0, leftWords.Count);
         leftText.text = leftWords[next].ToString();
         leftImage.sprite = leftSprites[next];
