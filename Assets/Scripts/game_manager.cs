@@ -36,6 +36,9 @@ public class game_manager : MonoBehaviour {
 	{
 		zycia--;
 		lifes.text = zycia.ToString ();
+        score -= 3;
+    
+        textScore.text = score.ToString();
 		//actualShips--;
 		if (zycia == 0) 
 		{
@@ -47,8 +50,13 @@ public class game_manager : MonoBehaviour {
     {
         zycia++;
         lifes.text = zycia.ToString ();
-        //actualShips--;
+
+            score +=5;
         
+        textScore.text = score.ToString();
+
+        //actualShips--;
+
         //lifes.text = actualShips.ToString();
     }
 

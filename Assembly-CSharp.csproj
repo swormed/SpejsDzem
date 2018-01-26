@@ -51,9 +51,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\addBadWords.cs" />
-     <Compile Include="Assets\addGoodWords.cs" />
-     <Compile Include="Assets\newgame.cs" />
+     <Compile Include="Assets\Scripts\addBadWords.cs" />
+     <Compile Include="Assets\Scripts\addGoodWords.cs" />
      <Compile Include="Assets\Scripts\enemy_manager.cs" />
      <Compile Include="Assets\Scripts\enemy_ship.cs" />
      <Compile Include="Assets\Scripts\exit.cs" />
@@ -61,8 +60,11 @@
      <Compile Include="Assets\Scripts\game_manager.cs" />
      <Compile Include="Assets\Scripts\garbageCollector.cs" />
      <Compile Include="Assets\Scripts\HammerRotation.cs" />
+     <Compile Include="Assets\Scripts\loadAnimals.cs" />
+     <Compile Include="Assets\Scripts\loadCategories.cs" />
+     <Compile Include="Assets\Scripts\loadFood.cs" />
      <Compile Include="Assets\Scripts\loadKategorie.cs" />
-     <Compile Include="Assets\Scripts\loadLevel1.cs" />
+     <Compile Include="Assets\Scripts\newgame.cs" />
      <Compile Include="Assets\Scripts\player_controller.cs" />
      <Compile Include="Assets\Scripts\projectile_controller.cs" />
      <Compile Include="Assets\Scripts\SharedObject.cs" />

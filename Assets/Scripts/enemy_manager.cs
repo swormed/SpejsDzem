@@ -9,8 +9,8 @@ public class enemy_manager : MonoBehaviour {
     public Transform player;
 
 	private float spawnTime;
-	public float minSpawnTime = 3.0f;
-	public float maxSpawnTime = 10.0f;
+	public float minSpawnTime = 5.0f;
+	public float maxSpawnTime = 15.0f;
 	private float lastSpawnTime;
 
 	// Use this for initialization
