@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/animals.unity
+- path: Assets/scenes/food.unity
   isLoaded: 1
   isActive: 1

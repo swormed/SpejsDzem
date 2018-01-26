@@ -35,12 +35,12 @@ public class player_controller : MonoBehaviour {
     void Update () {
 
 
-        if (Input.GetKeyDown(KeyCode.UpArrow)) 
+        if (Input.GetKeyDown(KeyCode.UpArrow)||Input.GetMouseButtonUp(1)) 
 		{
             MoveLeft();
 
         }
-	else if (Input.GetKeyDown(KeyCode.DownArrow)) 
+	else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetMouseButtonUp(0)) 
 		{
             MoveRight();
         }

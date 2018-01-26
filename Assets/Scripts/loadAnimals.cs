@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class loadLevel1 : MonoBehaviour {
-    
+public class loadAnimals : MonoBehaviour
+{
+
     public Button butt;
 
     void Start()
@@ -13,7 +14,7 @@ public class loadLevel1 : MonoBehaviour {
 
     void TaskOnClick()
     {
-            Application.LoadLevel("scena1");
+        Application.LoadLevel("animals");
     }
 
 }
